@@ -1,11 +1,11 @@
 export interface Project {
   id: string;
   name: string;
-  price: number;
+  price?: number;
   image: string;
-  soldOut: boolean;
+  soldOut?: boolean;
   category: string;
-  season: string;
+  season?: string;
 }
 
 export interface Collection {

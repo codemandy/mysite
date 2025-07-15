@@ -29,7 +29,7 @@ const config: Config = {
         '2xl': '1.5rem', // 24px
         '3xl': '1.875rem', // 30px
         '4xl': '2.25rem',  // 36px
-        heading: '0.175rem',   // 48px custom
+        'heading': ['0.9rem', { lineHeight: '1.25' }],  
       },
 
       // Custom font weights
