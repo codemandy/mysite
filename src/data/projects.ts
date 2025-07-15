@@ -16,120 +16,87 @@ export const collections: Collection[] = [
 
 export const projects: Project[] = [
   {
-    id: 'c-star-tee-white',
-    name: 'C-Star Tee',
-    price: 42.00,
-    image: '/media/collage_setup_02-3.jpg',
-    soldOut: true,
-    category: 'tees',
-    season: 'season-20'
+    id: 'collage-setup-02-3',
+    name: 'Collage 2024',
+    image: '/media/projects/collage_setup_02-3.jpg',
+    category: 'artwork'
   },
   {
-    id: 'c-star-tee-black',
-    name: 'C-Star Tee',
-    price: 42.00,
-    image: '/media/1.jpg',
-    soldOut: true,
-    category: 'tees',
-    season: 'season-20'
+    id: 'skene-01',
+    name: 'Skene 01',
+    image: '/media/projects/skene_01.jpg',
+    category: 'artwork'
   },
   {
-    id: 'running-man-tee-white',
-    name: 'Running Man Tee',
-    price: 42.00,
-    image: '/media/skene_01.jpg',
-    soldOut: false,
-    category: 'tees',
-    season: 'season-20'
+    id: 'skene-02',
+    name: 'Skene 02',
+    image: '/media/projects/skene_02.jpg',
+    category: 'artwork'
   },
   {
-    id: 'running-man-tee-black',
-    name: 'Running Man Tee',
-    price: 42.00,
-    image: '/media/Selfstorage_2024.jpg',
-    soldOut: true,
-    category: 'tees',
-    season: 'season-20'
+    id: 'skene-03',
+    name: 'Skene 03',
+    image: '/media/projects/skene_03.jpg',
+    category: 'artwork'
   },
   {
-    id: 'mademoiselle-tee-white',
-    name: 'Mademoiselle Tee',
-    price: 42.00,
-    image: '/media/Studio_1_2024.jpg',
-    soldOut: true,
-    category: 'tees',
-    season: 'season-20'
+    id: 'bubble-01',
+    name: '01 Bubble',
+    image: '/media/projects/01_bubble.jpg',
+    category: 'artwork'
   },
   {
-    id: 'mademoiselle-tee-black',
-    name: 'Mademoiselle Tee',
-    price: 42.00,
-    image: '/media/sloterdijk-bubbles-spheres-1_0398-5-speed-14-final-print-7.jpg',
-    soldOut: false,
-    category: 'tees',
-    season: 'season-20'
+    id: 'bubble-02',
+    name: '02 Bubble',
+    image: '/media/projects/02_bubble.jpg',
+    category: 'artwork'
   },
   {
-    id: 'dog-tee-white',
-    name: 'Dog Tee',
-    price: 42.00,
-    image: '/media/pigs.png',
-    soldOut: false,
-    category: 'tees',
-    season: 'season-20'
+    id: 'bubble-03',
+    name: '03 Bubble',
+    image: '/media/projects/03_bubble.jpg',
+    category: 'artwork'
   },
   {
-    id: 'thermal-hoodie-red',
-    name: 'C-Star Thermal Hoodie',
-    price: 128.00,
-    image: '/media/theeth.png',
-    soldOut: false,
-    category: 'hoodies',
-    season: 'season-20'
+    id: 'musictheory-01',
+    name: 'Musictheory 01',
+    image: '/media/projects/musictheory_01.jpg',
+    category: 'artwork'
   },
   {
-    id: 'fake-zip-hoodie',
-    name: 'Fake Zip Up Hoodie',
-    price: 128.00,
-    image: '/media/keys.png',
-    soldOut: false,
-    category: 'hoodies',
-    season: 'season-20'
+    id: 'musictheory-02',
+    name: 'Musictheory 02',
+    image: '/media/projects/musictheory_02.jpg',
+    category: 'artwork'
   },
   {
-    id: 'dumb-dog-deck',
-    name: 'Dumb Dog Deck',
-    price: 98.00,
-    image: '/media/collage_setup_02-3.jpg',
-    soldOut: false,
-    category: 'decks',
-    season: 'season-20'
+    id: 'collage-01',
+    name: 'Collage 01',
+    image: '/media/projects/collage_01.jpg',
+    category: 'artwork'
   },
   {
-    id: 'leather-wallet',
-    name: 'Leather Wallet',
-    price: 88.00,
-    image: '/media/1.jpg',
-    soldOut: false,
-    category: 'accessories',
-    season: 'season-20'
+    id: 'collage-03',
+    name: 'Collage 03',
+    image: '/media/projects/collage_03.jpg',
+    category: 'artwork'
   },
   {
-    id: 'pencil-pack',
-    name: '#2 Pencil - 12 Pack',
-    price: 12.00,
-    image: '/media/skene_01.jpg',
-    soldOut: false,
-    category: 'accessories',
-    season: 'season-20'
+    id: 'sild-2024',
+    name: 'Sild 2024',
+    image: '/media/projects/Sild_2024.jpg',
+    category: 'artwork'
   },
   {
-    id: 'silver-necklace',
-    name: '.925 Silver Pencil Sharpener Necklace',
-    price: 348.00,
-    image: '/media/Selfstorage_2024.jpg',
-    soldOut: true,
-    category: 'accessories',
-    season: 'season-20'
+    id: 'home61-2024',
+    name: 'Home61 2024',
+    image: '/media/projects/home61_2024.jpg',
+    category: 'artwork'
+  },
+  {
+    id: 'selfstorage-2024',
+    name: 'Selfstorage 2024',
+    image: '/media/projects/Selfstorage_2024.jpg',
+    category: 'artwork'
   }
 ]; 
