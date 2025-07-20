@@ -7,11 +7,39 @@ export default function NewsPage() {
         {/* Left Column - Navigation and Content (40%) */}
         <div className="flex flex-col bg-gray-50">
           <Header />
-          <main className="px-2 pt-8 mt-2">
-            <div style={{ marginLeft: '0.3rem' }}>
-              <h1 className="text-sm font-bold mb-6 mt-8">NEWS</h1>
-              <div className="space-y-4">
-                <p className="text-sm">News and updates will appear here.</p>
+          <main className="px-4 py-4 mt-6">
+            <div>
+              <div className="space-y-2">
+                <p className="text-xs font-medium" style={{ color: '#666666' }}>MARCH 15, 2024</p>
+                <p className="text-sm">New exhibition "Digital Frontiers" opens at Konstnärshuset in Stockholm. The show features recent works from the Skene series alongside new digital explorations.</p>
+              </div>
+              
+              <br />
+              
+              <div className="space-y-2">
+                <p className="text-xs font-medium" style={{ color: '#666666' }}>FEBRUARY 28, 2024</p>
+                <p className="text-sm">Collaboration announced with RPS Gallery Tokyo for a special edition print series. Limited to 25 copies, each piece will be hand-signed and numbered.</p>
+              </div>
+              
+              <br />
+              
+              <div className="space-y-2">
+                <p className="text-xs font-medium" style={{ color: '#666666' }}>JANUARY 12, 2024</p>
+                <p className="text-sm">"Bubble Series" featured in Artforum's digital edition. The review highlights the exploration of organic forms and fluid dynamics in contemporary digital art.</p>
+              </div>
+              
+              <br />
+              
+              <div className="space-y-2">
+                <p className="text-xs font-medium" style={{ color: '#666666' }}>DECEMBER 8, 2023</p>
+                <p className="text-sm">Solo exhibition "Translations" opens at Vermland Basement in Copenhagen. The show presents new works examining the intersection of technology and natural concepts.</p>
+              </div>
+              
+              <br />
+              
+              <div className="space-y-2">
+                <p className="text-xs font-medium" style={{ color: '#666666' }}>NOVEMBER 20, 2023</p>
+                <p className="text-sm">Artist talk at Royal College of Art London discussing pictorial strategies in digital media. The lecture explores recent developments in the Musictheory series.</p>
               </div>
             </div>
           </main>

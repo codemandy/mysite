@@ -49,7 +49,7 @@ export default function ProjectCard({ project, onProjectSelect, onProjectClear }
         onClick={handleClick}
         onDoubleClick={handleDoubleClick}
       >
-        <div className="relative w-full aspect-[4/3] overflow-hidden" style={{ backgroundColor: 'rgb(249, 250, 252)' }}>
+        <div className="relative w-full aspect-[4/3] overflow-hidden" style={{ backgroundColor: '#e8e8e8' }}>
           <Image
             src={project.image}
             alt={project.name}
@@ -57,10 +57,6 @@ export default function ProjectCard({ project, onProjectSelect, onProjectClear }
             className="object-cover group-hover:opacity-90 transition-opacity"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-        </div>
-        
-        <div className="text-left mt-2">
-          <p className="text-xs tracking-tight">{project.name}</p>
         </div>
       </div>
 

@@ -7,12 +7,9 @@ export default function InfoPage() {
         {/* Left Column - Navigation and Content (40%) */}
         <div className="flex flex-col bg-gray-50">
           <Header />
-          <main className="px-2 pt-8 mt-2">
-            <div style={{ marginLeft: '0.3rem' }}>
-              <h1 className="text-sm font-bold mb-6 mt-8">INFO</h1>
-              <div className="space-y-4">
-                <p className="text-sm">Based in Copenhagen - Malmö. His work examines pictorial strategies through a variety of media. A wide interest in interpretation and translations of gestures in technology and concepts in nature are fundamental to his practice. He holds an MA from Royal College of Art in London (2020). Recent exhibitions include: Konstnärshuset (Stockholm), Vermland (Basement) (Copenhagen), Skene (Malmö), RPS Gallery (Tokyo), HGB Gallery (Leipzig), Kunstverien Siegen (Siegen).</p>
-              </div>
+          <main className="px-4 py-4 mt-6">
+            <div className="space-y-4">
+              <p className="text-sm">Based in Copenhagen - Malmö. His work examines pictorial strategies through a variety of media. A wide interest in interpretation and translations of gestures in technology and concepts in nature are fundamental to his practice. He holds an MA from Royal College of Art in London (2020). Recent exhibitions include: Konstnärshuset (Stockholm), Vermland (Basement) (Copenhagen), Skene (Malmö), RPS Gallery (Tokyo), HGB Gallery (Leipzig), Kunstverien Siegen (Siegen).</p>
             </div>
           </main>
         </div>

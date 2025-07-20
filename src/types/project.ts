@@ -6,6 +6,11 @@ export interface Project {
   soldOut?: boolean;
   category: string;
   season?: string;
+  year?: string;
+  medium?: string;
+  dimensions?: string;
+  description?: string;
+  details?: string[];
 }
 
 export interface Collection {
