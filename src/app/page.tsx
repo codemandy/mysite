@@ -10,7 +10,7 @@ import { Project } from '@/types/project';
 
 export default function HomePage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [leftSidebarWidth, setLeftSidebarWidth] = useState(20);
+  const [leftSidebarWidth] = useState(20);
   const [middleWidth, setMiddleWidth] = useState(25);
 
   console.log('Projects loaded:', projects.length, projects);

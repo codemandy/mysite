@@ -11,7 +11,7 @@ export default function NewsPage() {
             <div>
               <div className="space-y-2">
                 <p className="text-xs font-medium" style={{ color: '#666666' }}>MARCH 15, 2024</p>
-                <p className="text-sm">New exhibition "Digital Frontiers" opens at Konstnärshuset in Stockholm. The show features recent works from the Skene series alongside new digital explorations.</p>
+                <p className="text-sm">New exhibition &ldquo;Digital Frontiers&rdquo; opens at Konstnärshuset in Stockholm. The show features recent works from the Skene series alongside new digital explorations.</p>
               </div>
               
               <br />
@@ -25,14 +25,14 @@ export default function NewsPage() {
               
               <div className="space-y-2">
                 <p className="text-xs font-medium" style={{ color: '#666666' }}>JANUARY 12, 2024</p>
-                <p className="text-sm">"Bubble Series" featured in Artforum's digital edition. The review highlights the exploration of organic forms and fluid dynamics in contemporary digital art.</p>
+                <p className="text-sm">&ldquo;Bubble Series&rdquo; featured in Artforum&apos;s digital edition. The review highlights the exploration of organic forms and fluid dynamics in contemporary digital art.</p>
               </div>
               
               <br />
               
               <div className="space-y-2">
                 <p className="text-xs font-medium" style={{ color: '#666666' }}>DECEMBER 8, 2023</p>
-                <p className="text-sm">Solo exhibition "Translations" opens at Vermland Basement in Copenhagen. The show presents new works examining the intersection of technology and natural concepts.</p>
+                <p className="text-sm">Solo exhibition &ldquo;Translations&rdquo; opens at Vermland Basement in Copenhagen. The show presents new works examining the intersection of technology and natural concepts.</p>
               </div>
               
               <br />
