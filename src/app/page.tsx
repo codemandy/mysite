@@ -13,8 +13,6 @@ export default function HomePage() {
   const [leftSidebarWidth] = useState(20);
   const [middleWidth, setMiddleWidth] = useState(25);
 
-  console.log('Projects loaded:', projects.length, projects);
-
   // Load saved width from localStorage on mount
   useEffect(() => {
     const savedMiddleWidth = localStorage.getItem('middleWidth');

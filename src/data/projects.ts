@@ -1,18 +1,4 @@
-import { Project, Collection } from '@/types/project';
-
-export const collections: Collection[] = [
-  { id: 'turnstile', name: 'Turnstile', path: '/turnstile' },
-  { id: 'season-20', name: 'Season 20', path: '/season-20' },
-  { id: 'sleepwalker', name: 'Sleepwalker', path: '/sleepwalker' },
-  { id: 'season-19', name: 'Season 19', path: '/season-19' },
-  { id: 'vans', name: 'Vans', path: '/vans' },
-  { id: 'avirex', name: 'Avirex', path: '/avirex' },
-  { id: 'season-18', name: 'Season 18', path: '/season-18' },
-  { id: 'vans-2024', name: 'Vans 2024', path: '/vans-2024' },
-  { id: 'orioles', name: 'Orioles', path: '/orioles' },
-  { id: 'brat', name: 'BRAT', path: '/brat' },
-  { id: 'season-17', name: 'Season 17', path: '/season-17' },
-];
+import { Project } from '@/types/project';
 
 export const projects: Project[] = [
   {
