@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="w-full" style={{ backgroundColor: '#f8f8f8', marginBottom: '1rem' }}>
+    <header className="w-full header-font" style={{ backgroundColor: '#f8f8f8', marginBottom: '1rem' }}>
       <div className="flex justify-start px-4 py-5 mb-6">
         <div className="w-full">
           <nav className="flex justify-start gap-6">

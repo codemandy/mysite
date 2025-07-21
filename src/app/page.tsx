@@ -56,14 +56,14 @@ export default function HomePage() {
               {projects.length > 0 ? projects.map((project) => (
                 <div 
                   key={project.id}
-                  className="text-xs tracking-wider cursor-pointer hover:opacity-70 transition-opacity"
-                  style={{ color: '#2a2a2a' }}
+                  className="tracking-wider cursor-pointer hover:opacity-70 transition-opacity"
+                  style={{ color: '#2a2a2a', fontSize: '11px' }}
                   onClick={() => setSelectedProject(project)}
                 >
                   {project.id.toUpperCase()}
                 </div>
               )) : (
-                <div className="text-xs" style={{ color: '#2a2a2a' }}>No projects found</div>
+                <div className="text-xs" style={{ color: '#2a2a2a', fontSize: '11px' }}>No projects found</div>
               )}
             </div>
           </div>
@@ -121,46 +121,46 @@ export default function HomePage() {
               {/* Right side - Details */}
               <div className="flex-1 max-w-[40%]">
                 <div className="space-y-6">
-                  <h1 className="text-lg font-medium tracking-wide uppercase">
+                  <h1 className="text-lg font-medium tracking-wide uppercase" style={{ fontSize: '11px' }}>
                     {selectedProject.name}
                   </h1>
                   
                   <div className="space-y-4">
                     {selectedProject.year && (
                       <div className="space-y-1">
-                        <h3 className="text-xs font-medium tracking-wider" style={{ color: '#555555' }}>YEAR</h3>
-                        <p className="text-xs" style={{ color: '#2a2a2a' }}>{selectedProject.year}</p>
+                        <h3 className="text-xs font-medium tracking-wider" style={{ color: '#555555', fontSize: '11px' }}>YEAR</h3>
+                        <p className="text-xs" style={{ color: '#2a2a2a', fontSize: '11px' }}>{selectedProject.year}</p>
                       </div>
                     )}
                     
                     {selectedProject.medium && (
                       <div className="space-y-1">
-                        <h3 className="text-xs font-medium tracking-wider" style={{ color: '#555555' }}>MEDIUM</h3>
-                        <p className="text-xs" style={{ color: '#2a2a2a' }}>{selectedProject.medium}</p>
+                        <h3 className="text-xs font-medium tracking-wider" style={{ color: '#555555', fontSize: '11px' }}>MEDIUM</h3>
+                        <p className="text-xs" style={{ color: '#2a2a2a', fontSize: '11px' }}>{selectedProject.medium}</p>
                       </div>
                     )}
                     
                     {selectedProject.dimensions && (
                       <div className="space-y-1">
-                        <h3 className="text-xs font-medium tracking-wider" style={{ color: '#555555' }}>DIMENSIONS</h3>
-                        <p className="text-xs" style={{ color: '#2a2a2a' }}>{selectedProject.dimensions}</p>
+                        <h3 className="text-xs font-medium tracking-wider" style={{ color: '#555555', fontSize: '11px' }}>DIMENSIONS</h3>
+                        <p className="text-xs" style={{ color: '#2a2a2a', fontSize: '11px' }}>{selectedProject.dimensions}</p>
                       </div>
                     )}
                   </div>
                   
                   {selectedProject.description && (
                     <div className="space-y-2">
-                      <h2 className="text-sm font-medium tracking-wider">DESCRIPTION</h2>
-                      <p className="text-xs leading-relaxed" style={{ color: '#2a2a2a' }}>{selectedProject.description}</p>
+                      <h2 className="text-sm font-medium tracking-wider" style={{ fontSize: '11px' }}>DESCRIPTION</h2>
+                      <p className="text-xs leading-relaxed" style={{ color: '#2a2a2a', fontSize: '11px' }}>{selectedProject.description}</p>
                     </div>
                   )}
                   
                   {selectedProject.details && selectedProject.details.length > 0 && (
                     <div className="space-y-2">
-                      <h2 className="text-sm font-medium tracking-wider">DETAILS</h2>
+                      <h2 className="text-sm font-medium tracking-wider" style={{ fontSize: '11px' }}>DETAILS</h2>
                       <ul className="space-y-1">
                         {selectedProject.details.map((detail, index) => (
-                          <li key={index} className="text-xs" style={{ color: '#2a2a2a' }}>
+                          <li key={index} className="text-xs" style={{ color: '#2a2a2a', fontSize: '11px' }}>
                             {detail}
                           </li>
                         ))}
@@ -185,7 +185,7 @@ export default function HomePage() {
                               <div 
                   key={project.id}
                   className="text-xs tracking-wider cursor-pointer hover:opacity-70 transition-opacity"
-                  style={{ color: '#2a2a2a' }}
+                  style={{ color: '#2a2a2a', fontSize: '11px' }}
                   onClick={() => setSelectedProject(project)}
                 >
                 {project.id.toUpperCase()}
