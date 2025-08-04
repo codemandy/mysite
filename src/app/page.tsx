@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import ProjectGrid from '@/components/ProjectGrid';
 import ResizeHandle from '@/components/ResizeHandle';
+import Lightbox from '@/components/Lightbox';
 import { projects } from '@/data/projects';
 import { Project } from '@/types/project';
 
@@ -12,6 +13,7 @@ export default function HomePage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [leftSidebarWidth] = useState(20);
   const [middleWidth, setMiddleWidth] = useState(25);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   // Load saved width from localStorage on mount
   useEffect(() => {
@@ -27,6 +29,14 @@ export default function HomePage() {
 
   const clearSelectedProject = () => {
     setSelectedProject(null);
+  };
+
+  const openLightbox = () => {
+    setIsLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsLightboxOpen(false);
   };
 
   const handleResize = (newWidth: number) => {
@@ -104,15 +114,24 @@ export default function HomePage() {
             <div className="flex flex-row max-w-full gap-8">
               {/* Left side - Image */}
               <div className="flex-1 max-w-[60%]" style={{ marginLeft: '2rem' }}>
-                <div className="relative w-full max-h-[80vh]">
+                <div className="relative w-full max-h-[80vh] cursor-pointer" onClick={openLightbox}>
                   <Image
                     src={selectedProject.image}
                     alt={selectedProject.name}
                     width={800}
                     height={600}
-                    className="object-contain max-w-full max-h-full"
+                    className="object-contain max-w-full max-h-full hover:opacity-90 transition-opacity"
                     priority
                   />
+                  {/* Lightbox indicator */}
+                  <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white p-1 rounded">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="m21 21-4.35-4.35"></path>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                  </div>
                 </div>
               </div>
               
@@ -171,6 +190,16 @@ export default function HomePage() {
           )}
         </div>
       </div>
+
+      {/* Lightbox */}
+      {selectedProject && (
+        <Lightbox
+          isOpen={isLightboxOpen}
+          onClose={closeLightbox}
+          imageSrc={selectedProject.image}
+          imageAlt={selectedProject.name}
+        />
+      )}
 
       {/* Mobile Layout */}
       <div className="lg:hidden min-h-screen" style={{ backgroundColor: '#f8f8f8' }}>

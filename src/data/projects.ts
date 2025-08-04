@@ -2,6 +2,22 @@ import { Project } from '@/types/project';
 
 export const projects: Project[] = [
   {
+    id: 'bodyshop-2024',
+    name: 'Bodyshop',
+    image: '/media/projects/bodyshop.jpg',
+    category: 'artwork',
+    year: '2024',
+    medium: 'Mixed Media',
+    dimensions: '100 x 80 cm',
+    description: 'Exploration of automotive culture and industrial aesthetics through mixed media composition.',
+    details: [
+      'Mixed media on canvas',
+      'Edition of 10',
+      'Signed and numbered',
+      'Certificate of authenticity included'
+    ]
+  },
+  {
     id: 'yr0201',
     name: 'Collage 2024',
     image: '/media/projects/collage_setup_02-3.jpg',
