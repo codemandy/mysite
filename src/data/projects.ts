@@ -2,7 +2,7 @@ import { Project } from '@/types/project';
 
 export const projects: Project[] = [
   {
-    id: 'watches-2024',
+    id: 'watches',
     name: 'Watches',
     image: '/media/projects/watches_02.jpg',
     images: [
@@ -24,7 +24,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 'screensavers-2024',
+    id: 'screensavers',
     name: 'Screensavers',
     image: '/media/projects/screensavers.jpg',
     category: 'artwork',
@@ -77,7 +77,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 'the-ghost-frequence-2024',
+    id: 'the-ghost-frequence',
     name: 'The Ghost Frequence',
     image: '/media/projects/skene_01.jpg',
     images: [
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 'the-thebaid-2024',
+    id: 'the-thebaid',
     name: 'The Thebaid',
     image: '/media/projects/01_bubble.jpg',
     images: [
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 'musictheory-2024',
+    id: 'musictheory',
     name: 'Musictheory',
     image: '/media/projects/musictheory_01.jpg',
     images: [
@@ -157,7 +157,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 'collages-2024',
+    id: 'collages',
     name: 'Collages',
     image: '/media/projects/Selfstorage_2024.jpg',
     images: [
