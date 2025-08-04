@@ -2,6 +2,28 @@ import { Project } from '@/types/project';
 
 export const projects: Project[] = [
   {
+    id: 'watches-2024',
+    name: 'Watches',
+    image: '/media/projects/watches_02.jpg',
+    images: [
+      '/media/projects/watches_02.jpg',
+      '/media/projects/watchespsd.jpg'
+    ],
+    category: 'artwork',
+    year: '2024',
+    medium: 'Digital Photography',
+    dimensions: '80 x 80 cm',
+    description: 'A series exploring the intersection of time and light through abstract clock photography, featuring glowing analog faces against dark backgrounds.',
+    details: [
+      'Digital photography',
+      'Time series',
+      'Edition of 10',
+      'Archival pigment print',
+      'Signed and numbered',
+      'Certificate of authenticity included'
+    ]
+  },
+  {
     id: 'screensavers-2024',
     name: 'Screensavers',
     image: '/media/projects/screensavers.jpg',
@@ -55,210 +77,113 @@ export const projects: Project[] = [
   },
 
   {
-    id: 'yr0200s3',
-    name: 'Skene 01',
+    id: 'the-ghost-frequence-2024',
+    name: 'The Ghost Frequence',
     image: '/media/projects/skene_01.jpg',
+    images: [
+      '/media/projects/skene_01.jpg',
+      '/media/projects/skene_02.jpg',
+      '/media/projects/skene_03.jpg',
+      '/media/projects/floorplan.jpg'
+    ],
+    imageTitles: [
+      'Skene 01',
+      'Skene 02',
+      'Skene 03',
+      'Floorplan'
+    ],
     category: 'artwork',
     year: '2024',
     medium: 'Digital Photography',
     dimensions: '80 x 120 cm',
-    description: 'First in the Skene series exploring architectural space and light.',
+    description: 'A four-piece photographic series exploring architectural space, light, and shadow through digital photography, capturing the ephemeral qualities of constructed environments with accompanying spatial documentation.',
     details: [
       'Archival pigment print',
       'Edition of 5',
       'Framed in black aluminum',
+      'Four-piece series',
       'Certificate of authenticity included'
     ]
   },
   {
-    id: 'yr0200s2',
-    name: 'Skene 02',
-    image: '/media/projects/skene_02.jpg',
-    category: 'artwork',
-    year: '2024',
-    medium: 'Digital Photography',
-    dimensions: '80 x 120 cm',
-    description: 'Second piece in the Skene series, continuing the exploration of space.',
-    details: [
-      'Archival pigment print',
-      'Edition of 5',
-      'Framed in black aluminum',
-      'Part of the Skene collection'
-    ]
-  },
-  {
-    id: 'yr0200s1',
-    name: 'Skene 03',
-    image: '/media/projects/skene_03.jpg',
-    category: 'artwork',
-    year: '2024',
-    medium: 'Digital Photography',
-    dimensions: '80 x 120 cm',
-    description: 'Third piece in the Skene series, exploring the intersection of light and shadow.',
-    details: [
-      'Archival pigment print',
-      'Edition of 5',
-      'Framed in black aluminum',
-      'Part of the Skene collection'
-    ]
-  },
-  {
-    id: 'yr0200',
-    name: '01 Bubble',
+    id: 'the-thebaid-2024',
+    name: 'The Thebaid',
     image: '/media/projects/01_bubble.jpg',
+    images: [
+      '/media/projects/01_bubble.jpg',
+      '/media/projects/02_bubble.jpg',
+      '/media/projects/03_bubble.jpg'
+    ],
+    imageTitles: [
+      '01 Bubble',
+      '02 Bubble',
+      '03 Bubble'
+    ],
     category: 'artwork',
     year: '2024',
     medium: 'Mixed Media',
     dimensions: '60 x 60 cm',
-    description: 'First in the Bubble series, exploring organic forms and fluid dynamics.',
+    description: 'A three-piece series exploring organic forms and fluid dynamics through mixed media composition, capturing the essence of bubble-like formations.',
     details: [
       'Mixed media on canvas',
       'Edition of 10',
       'Signed and numbered',
+      'Three-piece series',
       'Certificate of authenticity included'
     ]
   },
   {
-    id: 'yr0199',
-    name: '02 Bubble',
-    image: '/media/projects/02_bubble.jpg',
-    category: 'artwork',
-    year: '2024',
-    medium: 'Mixed Media',
-    dimensions: '60 x 60 cm',
-    description: 'Second piece in the Bubble series, continuing the exploration of fluid forms.',
-    details: [
-      'Mixed media on canvas',
-      'Edition of 10',
-      'Signed and numbered',
-      'Part of the Bubble collection'
-    ]
-  },
-  {
-    id: 'yr0198s1',
-    name: '03 Bubble',
-    image: '/media/projects/03_bubble.jpg',
-    category: 'artwork',
-    year: '2024',
-    medium: 'Mixed Media',
-    dimensions: '60 x 60 cm',
-    description: 'Third piece in the Bubble series, completing the exploration of organic forms.',
-    details: [
-      'Mixed media on canvas',
-      'Edition of 10',
-      'Signed and numbered',
-      'Final piece in the series'
-    ]
-  },
-  {
-    id: 'yr0198dlx',
-    name: 'Musictheory 01',
+    id: 'musictheory-2024',
+    name: 'Musictheory',
     image: '/media/projects/musictheory_01.jpg',
+    images: [
+      '/media/projects/musictheory_01.jpg',
+      '/media/projects/musictheory_02.jpg'
+    ],
+    imageTitles: [
+      'Musictheory 01',
+      'Musictheory 02'
+    ],
     category: 'artwork',
     year: '2024',
     medium: 'Digital Art',
     dimensions: '100 x 100 cm',
-    description: 'First piece in the Musictheory series, exploring the visual representation of sound.',
+    description: 'A two-piece series exploring the visual representation of sound and audio-visual relationships through digital art.',
     details: [
       'Digital print on archival paper',
       'Edition of 15',
       'Signed and numbered',
-      'Part of the Musictheory collection'
+      'Two-piece series'
     ]
   },
   {
-    id: 'yr0198',
-    name: 'Musictheory 02',
-    image: '/media/projects/musictheory_02.jpg',
-    category: 'artwork',
-    year: '2024',
-    medium: 'Digital Art',
-    dimensions: '100 x 100 cm',
-    description: 'Second piece in the Musictheory series, continuing the exploration of audio-visual relationships.',
-    details: [
-      'Digital print on archival paper',
-      'Edition of 15',
-      'Signed and numbered',
-      'Final piece in the series'
-    ]
-  },
-  {
-    id: 'collage-01',
-    name: 'Collage 01',
-    image: '/media/projects/collage_01.jpg',
-    category: 'artwork',
-    year: '2024',
-    medium: 'Mixed Media Collage',
-    dimensions: '90 x 60 cm',
-    description: 'First piece in the Collage series, exploring layered composition and texture.',
-    details: [
-      'Mixed media on paper',
-      'Edition of 8',
-      'Signed and numbered',
-      'Part of the Collage collection'
-    ]
-  },
-  {
-    id: 'collage-03',
-    name: 'Collage 03',
-    image: '/media/projects/collage_03.jpg',
-    category: 'artwork',
-    year: '2024',
-    medium: 'Mixed Media Collage',
-    dimensions: '90 x 60 cm',
-    description: 'Third piece in the Collage series, exploring the boundaries of mixed media.',
-    details: [
-      'Mixed media on paper',
-      'Edition of 8',
-      'Signed and numbered',
-      'Final piece in the series'
-    ]
-  },
-  {
-    id: 'sild-2024',
-    name: 'Sild 2024',
-    image: '/media/projects/Sild_2024.jpg',
-    category: 'artwork',
-    year: '2024',
-    medium: 'Photography',
-    dimensions: '120 x 80 cm',
-    description: 'Contemporary photography exploring urban landscapes and architectural forms.',
-    details: [
-      'Archival pigment print',
-      'Edition of 12',
-      'Framed in white aluminum',
-      'Certificate of authenticity included'
-    ]
-  },
-  {
-    id: 'home61-2024',
-    name: 'Home61 2024',
-    image: '/media/projects/home61_2024.jpg',
-    category: 'artwork',
-    year: '2024',
-    medium: 'Digital Photography',
-    dimensions: '100 x 70 cm',
-    description: 'Exploration of domestic spaces and the concept of home through digital photography.',
-    details: [
-      'Digital print on archival paper',
-      'Edition of 10',
-      'Signed and numbered',
-      'Part of the Home series'
-    ]
-  },
-  {
-    id: 'selfstorage-2024',
-    name: 'Selfstorage 2024',
+    id: 'collages-2024',
+    name: 'Collages',
     image: '/media/projects/Selfstorage_2024.jpg',
+    images: [
+      '/media/projects/Selfstorage_2024.jpg',
+      '/media/projects/collage_01.jpg',
+      '/media/projects/Sild_2024.jpg',
+      '/media/projects/collage_03.jpg',
+      '/media/projects/home61_2024.jpg'
+    ],
+    imageTitles: [
+      'Selfstorage 2024',
+      'Collage 01',
+      'Sild 2024',
+      'Collage 03',
+      'Home61 2024'
+    ],
     category: 'artwork',
     year: '2024',
     medium: 'Mixed Media',
-    dimensions: '80 x 120 cm',
-    description: 'Mixed media exploration of storage spaces and the objects we choose to keep.',
+    dimensions: 'Various',
+    description: 'A five-piece collection exploring spatial relationships, domestic environments, and layered compositions through various mixed media techniques and photographic approaches.',
     details: [
-      'Mixed media on canvas',
-      'Edition of 7',
+      'Mixed media and photography',
+      'Various editions',
       'Signed and numbered',
+      'Five-piece collection',
       'Certificate of authenticity included'
     ]
   }

@@ -14,6 +14,7 @@ export default function HomePage() {
   const [leftSidebarWidth] = useState(20);
   const [middleWidth, setMiddleWidth] = useState(25);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState<string>('');
 
   // Load saved width from localStorage on mount
   useEffect(() => {
@@ -31,12 +32,14 @@ export default function HomePage() {
     setSelectedProject(null);
   };
 
-  const openLightbox = () => {
+  const openLightbox = (imageSrc: string) => {
+    setLightboxImage(imageSrc);
     setIsLightboxOpen(true);
   };
 
   const closeLightbox = () => {
     setIsLightboxOpen(false);
+    setLightboxImage('');
   };
 
   const handleResize = (newWidth: number) => {
@@ -112,17 +115,53 @@ export default function HomePage() {
         >
           {selectedProject && (
             <div className="flex flex-row max-w-full gap-8">
-              {/* Left side - Image */}
+              {/* Left side - Main Image and Additional Images */}
               <div className="flex-1 max-w-[60%]" style={{ marginLeft: '2rem' }}>
-                <div className="relative w-full max-h-[80vh] cursor-pointer" onClick={openLightbox}>
-                  <Image
-                    src={selectedProject.image}
-                    alt={selectedProject.name}
-                    width={800}
-                    height={600}
-                    className="object-contain max-w-full max-h-full hover:opacity-90 transition-opacity"
-                    priority
-                  />
+                <div>
+                  {/* Main Image */}
+                  <div className="w-full cursor-pointer" onClick={() => openLightbox(selectedProject.image)} style={{ marginBottom: '40px' }}>
+                    <div className="relative w-full max-h-[60vh]">
+                      <Image
+                        src={selectedProject.image}
+                        alt={selectedProject.name}
+                        width={800}
+                        height={600}
+                        className="object-contain max-w-full max-h-full hover:opacity-90 transition-opacity"
+                        priority
+                      />
+                    </div>
+                    {selectedProject.imageTitles && selectedProject.imageTitles[0] && (
+                      <div className="mt-2">
+                        <p className="text-xs" style={{ color: '#2a2a2a', fontSize: '11px' }}>
+                          {selectedProject.imageTitles[0]}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                  
+                  {/* Additional Images (if any) */}
+                  {selectedProject.images && selectedProject.images.length > 1 && (
+                    selectedProject.images.slice(1).map((imageSrc, index) => (
+                      <div key={index} className="w-full cursor-pointer" onClick={() => openLightbox(imageSrc)} style={{ marginBottom: '40px' }}>
+                        <div className="relative w-full max-h-[60vh]">
+                          <Image
+                            src={imageSrc}
+                            alt={`${selectedProject.name} - Additional view ${index + 1}`}
+                            width={800}
+                            height={600}
+                            className="object-contain max-w-full max-h-full hover:opacity-90 transition-opacity"
+                          />
+                        </div>
+                        {selectedProject.imageTitles && selectedProject.imageTitles[index + 1] && (
+                          <div className="mt-2">
+                            <p className="text-xs" style={{ color: '#2a2a2a', fontSize: '11px' }}>
+                              {selectedProject.imageTitles[index + 1]}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    ))
+                  )}
                 </div>
               </div>
               
@@ -183,11 +222,11 @@ export default function HomePage() {
       </div>
 
       {/* Lightbox */}
-      {selectedProject && (
+      {selectedProject && lightboxImage && (
         <Lightbox
           isOpen={isLightboxOpen}
           onClose={closeLightbox}
-          imageSrc={selectedProject.image}
+          imageSrc={lightboxImage}
           imageAlt={selectedProject.name}
         />
       )}
