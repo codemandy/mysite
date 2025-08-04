@@ -123,15 +123,6 @@ export default function HomePage() {
                     className="object-contain max-w-full max-h-full hover:opacity-90 transition-opacity"
                     priority
                   />
-                  {/* Lightbox indicator */}
-                  <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white p-1 rounded">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <path d="m21 21-4.35-4.35"></path>
-                      <line x1="11" y1="8" x2="11" y2="14"></line>
-                      <line x1="8" y1="11" x2="14" y2="11"></line>
-                    </svg>
-                  </div>
                 </div>
               </div>
               

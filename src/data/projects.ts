@@ -2,7 +2,43 @@ import { Project } from '@/types/project';
 
 export const projects: Project[] = [
   {
-    id: 'bodyshop-2024',
+    id: 'screensavers-2024',
+    name: 'Screensavers',
+    image: '/media/projects/screensavers.jpg',
+    category: 'artwork',
+    year: '2024',
+    medium: 'Digital Art',
+    dimensions: '100 x 100 cm',
+    description: 'A dynamic abstract composition featuring vibrant light trails in purple, green, and blue, creating a futuristic digital aesthetic.',
+    details: [
+      'Digital art',
+      'Abstract series',
+      'Edition of 12',
+      'Archival pigment print',
+      'Signed and numbered',
+      'Certificate of authenticity included'
+    ]
+  },
+  {
+    id: 'roadhearts',
+    name: 'Roadhearts',
+    image: '/media/projects/Roadhearts.jpg',
+    category: 'artwork',
+    year: '2024',
+    medium: 'Digital Photography',
+    dimensions: '120 x 80 cm',
+    description: 'An abstract exploration of urban light and emotion, featuring heart-shaped light distortions in a dreamlike night scene.',
+    details: [
+      'Digital photography',
+      'Night series',
+      'Edition of 8',
+      'Archival pigment print',
+      'Signed and numbered',
+      'Certificate of authenticity included'
+    ]
+  },
+  {
+    id: 'bodyshop',
     name: 'Bodyshop',
     image: '/media/projects/bodyshop.jpg',
     category: 'artwork',
@@ -17,22 +53,7 @@ export const projects: Project[] = [
       'Certificate of authenticity included'
     ]
   },
-  {
-    id: 'yr0201',
-    name: 'Collage 2024',
-    image: '/media/projects/collage_setup_02-3.jpg',
-    category: 'artwork',
-    year: '2024',
-    medium: 'Mixed Media Collage',
-    dimensions: '100 x 70 cm',
-    description: 'A contemporary exploration of digital and analog forms through layered composition.',
-    details: [
-      'Mixed media on canvas',
-      'Part of the 2024 series',
-      'Exhibited at Studio Gallery',
-      'Limited edition prints available'
-    ]
-  },
+
   {
     id: 'yr0200s3',
     name: 'Skene 01',
