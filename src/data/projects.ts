@@ -22,6 +22,10 @@ export const projects: Project[] = [
       'Signed and numbered',
       'Certificate of authenticity included'
     ],
+    imageTitles: [
+      '01',
+      '02',
+    ],
     themeId: 'watches'
   },
   {

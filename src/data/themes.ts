@@ -8,10 +8,16 @@ export interface ProjectTheme {
     projectDetailsSection: string;
   };
   colors: {
-    primaryText: string;
-    secondaryText: string;
-    labelText: string;
-    navigationText: string;
+    navigationText: string;      // Navigation menu and project links
+    projectText: string;         // Main project content text
+    projectLabels: string;       // Labels like "YEAR", "MEDIUM", "DIMENSIONS"
+    projectImageTitles: string;  // Image titles and descriptions
+  };
+  fade: {
+    enabled: boolean;
+    delayMs: number;
+    opacity: number;
+    duration: number;
   };
 }
 
@@ -20,16 +26,22 @@ export const projectThemes: Record<string, ProjectTheme> = {
     id: 'default',
     name: 'Default Light',
     backgrounds: {
-      leftColumn: '/media/backgrounds/08.png',
-      middleColumn: '/media/backgrounds/home.jpg',
-      projectImagesSection: '/media/backgrounds/02.png',
-      projectDetailsSection: '/media/backgrounds/04.jpg',
+      leftColumn: '/media/backgrounds/secondary/19.png',
+      middleColumn: '/media/backgrounds/secondary/21.png',
+      projectImagesSection: '/media/backgrounds/secondary/16.png',
+      projectDetailsSection: '/media/backgrounds/secondary/18.png',
     },
     colors: {
-      primaryText: '#2a2a2a',
-      secondaryText: '#2a2a2a',
-      labelText: '#555555',
       navigationText: '#1a1a1a',
+      projectText: '#2a2a2a',
+      projectLabels: '#555555',
+      projectImageTitles: '#2a2a2a',
+    },
+    fade: {
+      enabled: true,
+      delayMs: 2000,
+      opacity: 0.3,
+      duration: 1000,
     },
   },
   
@@ -37,16 +49,22 @@ export const projectThemes: Record<string, ProjectTheme> = {
     id: 'bubble',
     name: 'Bubble Theme',
     backgrounds: {
-      leftColumn: '/media/backgrounds/11.png',
-      middleColumn: '/media/backgrounds/15.png',
-      projectImagesSection: '/media/backgrounds/09.jpg',
-      projectDetailsSection: '/media/backgrounds/13.png',
+      leftColumn: '/media/backgrounds/secondary/20.png',
+      middleColumn: '/media/backgrounds/secondary/17.png',
+      projectImagesSection: '/media/backgrounds/secondary/21.png',
+      projectDetailsSection: '/media/backgrounds/secondary/19.png',
     },
     colors: {
-      primaryText: '#ffffff',
-      secondaryText: '#f0f0f0',
-      labelText: '#cccccc',
       navigationText: '#ffffff',
+      projectText: '#ffffff',
+      projectLabels: '#cccccc',
+      projectImageTitles: '#f0f0f0',
+    },
+    fade: {
+      enabled: true,
+      delayMs: 2000,
+      opacity: 0.4,
+      duration: 1000,
     },
   },
 
@@ -54,16 +72,22 @@ export const projectThemes: Record<string, ProjectTheme> = {
     id: 'collage',
     name: 'Collage Theme',
     backgrounds: {
-      leftColumn: '/media/backgrounds/07.png',
-      middleColumn: '/media/backgrounds/01.jpg',
-      projectImagesSection: '/media/backgrounds/14.png',
-      projectDetailsSection: '/media/backgrounds/06.png',
+      leftColumn: '/media/backgrounds/secondary/18.png',
+      middleColumn: '/media/backgrounds/secondary/16.png',
+      projectImagesSection: '/media/backgrounds/secondary/20.png',
+      projectDetailsSection: '/media/backgrounds/secondary/17.png',
     },
     colors: {
-      primaryText: '#1a1a1a',
-      secondaryText: '#2a2a2a',
-      labelText: '#444444',
-      navigationText: '#1a1a1a',
+      navigationText: '#FFFFFF',
+      projectText: '#FFFFFF',
+      projectLabels: '#0A8CF6',
+      projectImageTitles: '#FFFFFF',
+    },
+    fade: {
+      enabled: true,
+      delayMs: 2000,
+      opacity: 0.35,
+      duration: 1000,
     },
   },
 
@@ -71,16 +95,22 @@ export const projectThemes: Record<string, ProjectTheme> = {
     id: 'skene',
     name: 'Skene Theme',
     backgrounds: {
-      leftColumn: '/media/backgrounds/12.png',
-      middleColumn: '/media/backgrounds/05.jpg',
-      projectImagesSection: '/media/backgrounds/03.svg',
-      projectDetailsSection: '/media/backgrounds/10.png',
+      leftColumn: '/media/backgrounds/secondary/21.png',
+      middleColumn: '/media/backgrounds/secondary/19.png',
+      projectImagesSection: '/media/backgrounds/secondary/18.png',
+      projectDetailsSection: '/media/backgrounds/secondary/16.png',
     },
     colors: {
-      primaryText: '#ffffff',
-      secondaryText: '#e0e0e0',
-      labelText: '#b0b0b0',
       navigationText: '#ffffff',
+      projectText: '#ffffff',
+      projectLabels: '#b0b0b0',
+      projectImageTitles: '#e0e0e0',
+    },
+    fade: {
+      enabled: true,
+      delayMs: 2000,
+      opacity: 0.4,
+      duration: 1000,
     },
   },
 
@@ -88,16 +118,22 @@ export const projectThemes: Record<string, ProjectTheme> = {
     id: 'watches',
     name: 'Watches Theme',
     backgrounds: {
-      leftColumn: '/media/backgrounds/04.jpg',
-      middleColumn: '/media/backgrounds/11.png',
-      projectImagesSection: '/media/backgrounds/15.png',
-      projectDetailsSection: '/media/backgrounds/08.png',
+      leftColumn: '/media/backgrounds/secondary/17.png',
+      middleColumn: '/media/backgrounds/secondary/20.png',
+      projectImagesSection: '/media/backgrounds/secondary/19.png',
+      projectDetailsSection: '/media/backgrounds/secondary/21.png',
     },
     colors: {
-      primaryText: '#EAEAEA',
-      secondaryText: '#E7E7E7',
-      labelText: '#121212',
-      navigationText: '#F0F0F0',
+      navigationText: '#D9D9D9',
+      projectText: '#474747',
+      projectLabels: '#2E2E2E',
+      projectImageTitles: '#FFFFFF',
+    },
+    fade: {
+      enabled: true,
+      delayMs: 2000,
+      opacity: 0.4,
+      duration: 1000,
     },
   },
 
@@ -111,10 +147,16 @@ export const projectThemes: Record<string, ProjectTheme> = {
       projectDetailsSection: 'linear-gradient(135deg, #2a2a2a 0%, #3d3d3d 100%)',
     },
     colors: {
-      primaryText: '#ffffff',
-      secondaryText: '#e0e0e0',
-      labelText: '#b0b0b0',
       navigationText: '#ffffff',
+      projectText: '#ffffff',
+      projectLabels: '#b0b0b0',
+      projectImageTitles: '#e0e0e0',
+    },
+    fade: {
+      enabled: false,
+      delayMs: 2000,
+      opacity: 0.3,
+      duration: 1000,
     },
   },
 
@@ -122,16 +164,22 @@ export const projectThemes: Record<string, ProjectTheme> = {
     id: 'roadhearts',
     name: 'Roadhearts Theme',
     backgrounds: {
-      leftColumn: '/media/backgrounds/09.jpg',
-      middleColumn: '/media/backgrounds/14.png',
-      projectImagesSection: '/media/backgrounds/01.jpg',
-      projectDetailsSection: '/media/backgrounds/12.png',
+      leftColumn: '/media/backgrounds/secondary/16.png',
+      middleColumn: '/media/backgrounds/secondary/18.png',
+      projectImagesSection: '/media/backgrounds/secondary/17.png',
+      projectDetailsSection: '/media/backgrounds/secondary/20.png',
     },
     colors: {
-      primaryText: '#ffffff',
-      secondaryText: '#f0f0f0',
-      labelText: '#cccccc',
       navigationText: '#ffffff',
+      projectText: '#ffffff',
+      projectLabels: '#cccccc',
+      projectImageTitles: '#f0f0f0',
+    },
+    fade: {
+      enabled: true,
+      delayMs: 2000,
+      opacity: 0.4,
+      duration: 1000,
     },
   },
 
@@ -139,16 +187,22 @@ export const projectThemes: Record<string, ProjectTheme> = {
     id: 'musictheory',
     name: 'Music Theory Theme',
     backgrounds: {
-      leftColumn: '/media/backgrounds/13.png',
-      middleColumn: '/media/backgrounds/07.png',
-      projectImagesSection: '/media/backgrounds/05.jpg',
-      projectDetailsSection: '/media/backgrounds/02.png',
+      leftColumn: '/media/backgrounds/secondary/19.png',
+      middleColumn: '/media/backgrounds/secondary/21.png',
+      projectImagesSection: '/media/backgrounds/secondary/16.png',
+      projectDetailsSection: '/media/backgrounds/secondary/18.png',
     },
     colors: {
-      primaryText: '#1a1a1a',
-      secondaryText: '#2a2a2a',
-      labelText: '#555555',
       navigationText: '#1a1a1a',
+      projectText: '#1a1a1a',
+      projectLabels: '#555555',
+      projectImageTitles: '#2a2a2a',
+    },
+    fade: {
+      enabled: true,
+      delayMs: 2000,
+      opacity: 0.35,
+      duration: 1000,
     },
   },
 };
