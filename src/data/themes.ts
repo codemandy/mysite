@@ -193,9 +193,9 @@ export const projectThemes: Record<string, ProjectTheme> = {
       projectDetailsSection: '/media/backgrounds/secondary/18.png',
     },
     colors: {
-      navigationText: '#1a1a1a',
-      projectText: '#1a1a1a',
-      projectLabels: '#555555',
+      navigationText: '#000000',
+      projectText: '#ECECEC',
+      projectLabels: '#E2E2E2',
       projectImageTitles: '#2a2a2a',
     },
     fade: {

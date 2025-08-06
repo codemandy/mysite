@@ -115,7 +115,7 @@ export default function HomePage() {
         {/* Right Column - Selected Image Display */}
         <div 
           id="project-container"
-          className="flex flex-col h-screen overflow-y-auto"
+          className="flex flex-col h-screen"
           style={{ 
             width: `${100 - leftSidebarWidth - middleWidth}%`,
             minWidth: '300px'
@@ -124,7 +124,7 @@ export default function HomePage() {
           {selectedProject && (
             <div className="flex flex-row h-full">
               {/* Left Column - Images (60%) */}
-              <div className={`w-[60%] pt-8 pb-8 overflow-y-hidden ${styles.projectImagesSection}`} style={{ marginLeft: '1rem', marginRight: '1rem' }}>
+              <div className={`w-[60%] pt-8 pb-8 overflow-y-auto hide-scrollbar ${styles.projectImagesSection}`} style={{ marginLeft: '1rem', marginRight: '1rem' }}>
                 <div>
                   {/* Main Image */}
                   <div className="w-full cursor-pointer" onClick={() => openLightbox(selectedProject.image)} style={{ marginBottom: '40px' }}>

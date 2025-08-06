@@ -41,15 +41,15 @@ export default function ResizeHandle({ onResize }: ResizeHandleProps) {
 
   return (
     <div
-      className="cursor-col-resize transition-all duration-200 hover:bg-gray-400 group"
+      className="cursor-col-resize transition-all duration-200 hover:bg-white group"
       onMouseDown={handleMouseDown}
       style={{
         width: '1px',
-        backgroundColor: isResizing ? 'rgba(0, 0, 0, 0.3)' : 'rgba(0, 0, 0, 0.2)',
+        backgroundColor: isResizing ? 'rgb(255 255 255)' : 'rgb(9 10 32)',
         zIndex: 10,
         flexShrink: 0,
-        marginLeft: '4px',
-        marginRight: '4px'
+        marginLeft: '0px',
+        marginRight: '0px'
       }}
     >
     </div>

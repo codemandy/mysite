@@ -113,6 +113,18 @@ p {
   background: #a0a0a0;
 }
 
+/* Hide scrollbar for middle column project grid */
+.hide-scrollbar {
+  /* Hide scrollbar for WebKit browsers */
+  -webkit-scrollbar: none;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 @font-face {
   font-family: 'Eurostile Regular';
   font-style: normal;
