@@ -21,7 +21,8 @@ export const projects: Project[] = [
       'Archival pigment print',
       'Signed and numbered',
       'Certificate of authenticity included'
-    ]
+    ],
+    themeId: 'watches'
   },
   {
     id: 'screensavers',
@@ -39,7 +40,8 @@ export const projects: Project[] = [
       'Archival pigment print',
       'Signed and numbered',
       'Certificate of authenticity included'
-    ]
+    ],
+    themeId: 'dark'
   },
   {
     id: 'roadhearts',
@@ -57,7 +59,8 @@ export const projects: Project[] = [
       'Archival pigment print',
       'Signed and numbered',
       'Certificate of authenticity included'
-    ]
+    ],
+    themeId: 'roadhearts'
   },
   {
     id: 'bodyshop',
@@ -73,7 +76,8 @@ export const projects: Project[] = [
       'Edition of 10',
       'Signed and numbered',
       'Certificate of authenticity included'
-    ]
+    ],
+    themeId: 'collage'
   },
 
   {
@@ -103,7 +107,8 @@ export const projects: Project[] = [
       'Framed in black aluminum',
       'Four-piece series',
       'Certificate of authenticity included'
-    ]
+    ],
+    themeId: 'skene'
   },
   {
     id: 'the-thebaid',
@@ -130,7 +135,8 @@ export const projects: Project[] = [
       'Signed and numbered',
       'Three-piece series',
       'Certificate of authenticity included'
-    ]
+    ],
+    themeId: 'bubble'
   },
   {
     id: 'musictheory',
@@ -154,7 +160,8 @@ export const projects: Project[] = [
       'Edition of 15',
       'Signed and numbered',
       'Two-piece series'
-    ]
+    ],
+    themeId: 'musictheory'
   },
   {
     id: 'collages',
@@ -185,6 +192,7 @@ export const projects: Project[] = [
       'Signed and numbered',
       'Five-piece collection',
       'Certificate of authenticity included'
-    ]
+    ],
+    themeId: 'collage'
   }
 ]; 

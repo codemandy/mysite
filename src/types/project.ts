@@ -10,4 +10,5 @@ export interface Project {
   dimensions?: string;
   description?: string;
   details?: string[];
+  themeId?: string; // Optional theme ID for dynamic theming
 } 

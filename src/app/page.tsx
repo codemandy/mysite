@@ -8,6 +8,9 @@ import ResizeHandle from '@/components/ResizeHandle';
 import Lightbox from '@/components/Lightbox';
 import { projects } from '@/data/projects';
 import { Project } from '@/types/project';
+import { getThemeForProject, projectThemes } from '@/data/themes';
+import { useTheme } from '@/hooks/useTheme';
+import styles from '@/styles/backgrounds.module.css';
 
 export default function HomePage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -15,6 +18,14 @@ export default function HomePage() {
   const [middleWidth, setMiddleWidth] = useState(25);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState<string>('');
+
+  // Get current theme based on selected project
+  const currentTheme = selectedProject 
+    ? getThemeForProject(selectedProject.themeId || selectedProject.id)
+    : projectThemes.default;
+  
+  // Apply theme using the custom hook
+  useTheme(currentTheme);
 
   // Load saved width from localStorage on mount
   useEffect(() => {
@@ -54,10 +65,9 @@ export default function HomePage() {
       <div className="hidden lg:flex min-h-screen">
         {/* Left Sidebar - Project List */}
         <div 
-          className="flex flex-col"
+          className={`flex flex-col ${styles.leftColumn}`}
           style={{ 
             width: `${leftSidebarWidth}%`,
-            backgroundColor: '#f8f8f8',
             minWidth: '200px'
           }}
         >
@@ -67,8 +77,8 @@ export default function HomePage() {
               {projects.length > 0 ? projects.map((project) => (
                 <div 
                   key={project.id}
-                  className="tracking-wider cursor-pointer hover:opacity-70 transition-opacity"
-                  style={{ color: '#2a2a2a', fontSize: '11px' }}
+                  className={`tracking-wider cursor-pointer hover:opacity-70 transition-opacity ${styles.secondaryText}`}
+                  style={{ fontSize: '11px' }}
                   onClick={() => setSelectedProject(project)}
                 >
                   {project.id.toUpperCase()}
@@ -82,15 +92,14 @@ export default function HomePage() {
 
         {/* Middle Column - Project Grid */}
         <div 
-          className="flex flex-col"
+          className={`flex flex-col ${styles.middleColumn}`}
           style={{ 
             width: `${middleWidth}%`,
-            backgroundColor: '#f8f8f8',
             minWidth: '300px'
           }}
         >
-          <main className="px-2 pt-8 mt-2 flex-1 overflow-y-auto">
-            <div style={{ marginLeft: '0.3rem' }}>
+          <main className="pl-8 pr-2 pt-8 mt-2 flex-1 overflow-y-auto">
+            <div style={{ marginLeft: '1rem', marginRight: '1rem' }}>
               <ProjectGrid 
                 projects={projects}
                 onProjectSelect={setSelectedProject}
@@ -105,18 +114,17 @@ export default function HomePage() {
         
         {/* Right Column - Selected Image Display */}
         <div 
-          className="flex flex-col pt-8 pb-8 pr-16 overflow-y-auto"
+          id="project-container"
+          className="flex flex-col h-screen overflow-y-auto"
           style={{ 
-            backgroundColor: '#f8f8f8',
             width: `${100 - leftSidebarWidth - middleWidth}%`,
-            minWidth: '300px',
-            paddingLeft: '0.75rem'
+            minWidth: '300px'
           }}
         >
           {selectedProject && (
-            <div className="flex flex-row max-w-full gap-8">
-              {/* Left side - Main Image and Additional Images */}
-              <div className="flex-1 max-w-[60%]" style={{ marginLeft: '2rem' }}>
+            <div className="flex flex-row h-full">
+              {/* Left Column - Images (60%) */}
+              <div className={`w-[60%] pt-8 pb-8 overflow-y-hidden ${styles.projectImagesSection}`} style={{ marginLeft: '1rem', marginRight: '1rem' }}>
                 <div>
                   {/* Main Image */}
                   <div className="w-full cursor-pointer" onClick={() => openLightbox(selectedProject.image)} style={{ marginBottom: '40px' }}>
@@ -165,49 +173,49 @@ export default function HomePage() {
                 </div>
               </div>
               
-              {/* Right side - Details */}
-              <div className="flex-1 max-w-[40%]">
+              {/* Right Column - Project Details (40%) */}
+              <div className={`w-[40%] pt-8 pb-8 pl-4 pr-8 overflow-y-auto ${styles.projectDetailsSection}`}>
                 <div className="space-y-6">
-                  <h1 className="text-lg font-medium tracking-wide uppercase" style={{ fontSize: '11px' }}>
+                  <h1 className={`text-lg font-medium tracking-wide uppercase ${styles.primaryText}`} style={{ fontSize: '11px' }}>
                     {selectedProject.name}
                   </h1>
                   
                   <div className="space-y-4">
                     {selectedProject.year && (
                       <div className="space-y-1">
-                        <h3 className="text-xs font-medium tracking-wider" style={{ color: '#555555', fontSize: '11px' }}>YEAR</h3>
-                        <p className="text-xs" style={{ color: '#2a2a2a', fontSize: '11px' }}>{selectedProject.year}</p>
+                        <h3 className={`text-xs font-medium tracking-wider ${styles.labelText}`} style={{ fontSize: '11px' }}>YEAR</h3>
+                        <p className={`text-xs ${styles.secondaryText}`} style={{ fontSize: '11px' }}>{selectedProject.year}</p>
                       </div>
                     )}
                     
                     {selectedProject.medium && (
                       <div className="space-y-1">
-                        <h3 className="text-xs font-medium tracking-wider" style={{ color: '#555555', fontSize: '11px' }}>MEDIUM</h3>
-                        <p className="text-xs" style={{ color: '#2a2a2a', fontSize: '11px' }}>{selectedProject.medium}</p>
+                        <h3 className={`text-xs font-medium tracking-wider ${styles.labelText}`} style={{ fontSize: '11px' }}>MEDIUM</h3>
+                        <p className={`text-xs ${styles.secondaryText}`} style={{ fontSize: '11px' }}>{selectedProject.medium}</p>
                       </div>
                     )}
                     
                     {selectedProject.dimensions && (
                       <div className="space-y-1">
-                        <h3 className="text-xs font-medium tracking-wider" style={{ color: '#555555', fontSize: '11px' }}>DIMENSIONS</h3>
-                        <p className="text-xs" style={{ color: '#2a2a2a', fontSize: '11px' }}>{selectedProject.dimensions}</p>
+                        <h3 className={`text-xs font-medium tracking-wider ${styles.labelText}`} style={{ fontSize: '11px' }}>DIMENSIONS</h3>
+                        <p className={`text-xs ${styles.secondaryText}`} style={{ fontSize: '11px' }}>{selectedProject.dimensions}</p>
                       </div>
                     )}
                   </div>
                   
                   {selectedProject.description && (
                     <div className="space-y-2">
-                      <h2 className="text-sm font-medium tracking-wider" style={{ fontSize: '11px' }}>DESCRIPTION</h2>
-                      <p className="text-xs leading-relaxed" style={{ color: '#2a2a2a', fontSize: '11px' }}>{selectedProject.description}</p>
+                      <h2 className={`text-sm font-medium tracking-wider ${styles.labelText}`} style={{ fontSize: '11px' }}>DESCRIPTION</h2>
+                      <p className={`text-xs leading-relaxed ${styles.primaryText}`} style={{ fontSize: '11px' }}>{selectedProject.description}</p>
                     </div>
                   )}
                   
                   {selectedProject.details && selectedProject.details.length > 0 && (
                     <div className="space-y-2">
-                      <h2 className="text-sm font-medium tracking-wider" style={{ fontSize: '11px' }}>DETAILS</h2>
+                      <h2 className={`text-sm font-medium tracking-wider ${styles.labelText}`} style={{ fontSize: '11px' }}>DETAILS</h2>
                       <ul className="space-y-1">
                         {selectedProject.details.map((detail, index) => (
-                          <li key={index} className="text-xs" style={{ color: '#2a2a2a', fontSize: '11px' }}>
+                          <li key={index} className={`text-xs ${styles.secondaryText}`} style={{ fontSize: '11px' }}>
                             {detail}
                           </li>
                         ))}

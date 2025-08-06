@@ -1,0 +1,68 @@
+/* Dynamic Theme System */
+
+/* Base layout classes without specific backgrounds */
+.leftColumn {
+  transition: all 0.3s ease-in-out;
+}
+
+.middleColumn {
+  transition: all 0.3s ease-in-out;
+}
+
+.projectImagesSection {
+  transition: all 0.3s ease-in-out;
+}
+
+.projectDetailsSection {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Text color classes for dynamic theming */
+.primaryText {
+  transition: color 0.3s ease-in-out;
+}
+
+.secondaryText {
+  transition: color 0.3s ease-in-out;
+}
+
+.labelText {
+  transition: color 0.3s ease-in-out;
+}
+
+.navigationText {
+  transition: color 0.3s ease-in-out;
+}
+
+/* Overlay for better text readability on busy backgrounds */
+.textOverlay {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(2px);
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+}
+
+.darkTextOverlay {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+}
+
+/* Smooth transitions for theme changes */
+.themeTransition {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Optional: Semi-transparent overlays for sections with text */
+.contentOverlay {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+}
+
+.darkContentOverlay {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+}

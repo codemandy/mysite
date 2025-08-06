@@ -41,24 +41,17 @@ export default function ResizeHandle({ onResize }: ResizeHandleProps) {
 
   return (
     <div
-      className="relative flex items-center justify-center cursor-col-resize transition-all duration-200 hover:bg-gray-400 group rounded"
+      className="cursor-col-resize transition-all duration-200 hover:bg-gray-400 group"
       onMouseDown={handleMouseDown}
       style={{
-        width: '8px',
-        backgroundColor: isResizing ? 'rgba(209, 213, 219, 0.6)' : 'rgba(209, 213, 219, 0.4)',
+        width: '1px',
+        backgroundColor: isResizing ? 'rgba(0, 0, 0, 0.3)' : 'rgba(0, 0, 0, 0.2)',
         zIndex: 10,
         flexShrink: 0,
-        borderLeft: '1px solid rgba(209, 213, 219, 0.6)',
-        borderRight: '1px solid rgba(209, 213, 219, 0.6)',
-        marginLeft: '8px',
-        borderRadius: '4px'
+        marginLeft: '4px',
+        marginRight: '4px'
       }}
     >
-      {/* Draggable indicator dots */}
-      <div className="flex flex-col gap-1 opacity-50 group-hover:opacity-80 transition-opacity">
-        <div className="w-1 h-1 bg-white rounded-full"></div>
-        <div className="w-1 h-1 bg-white rounded-full"></div>
-      </div>
     </div>
   );
 } 
