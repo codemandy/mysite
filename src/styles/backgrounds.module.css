@@ -6,6 +6,23 @@
   background-position: center;
   background-repeat: no-repeat;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding-top: 0.2rem;
+  padding-left: 0.2rem;
+}
+
+.leftColumn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, var(--darken-opacity, 0.4));
+  opacity: var(--fade-active, 0);
+  transition: opacity var(--fade-duration, 1000ms) ease-in-out;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .middleColumn {
@@ -14,6 +31,22 @@
   background-position: center;
   background-repeat: no-repeat;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding-top: 0.2rem;
+}
+
+.middleColumn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, var(--darken-opacity, 0.4));
+  opacity: var(--fade-active, 0);
+  transition: opacity var(--fade-duration, 1000ms) ease-in-out;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .rightColumn {
@@ -22,6 +55,22 @@
   background-position: center;
   background-repeat: no-repeat;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding-top: 0.2rem;
+}
+
+.rightColumn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, var(--darken-opacity, 0.4));
+  opacity: var(--fade-active, 0);
+  transition: opacity var(--fade-duration, 1000ms) ease-in-out;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Project Container Sections */
@@ -31,6 +80,32 @@
   background-position: center;
   background-repeat: no-repeat;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding-top: 0.2rem;
+}
+
+.bottomBackground {
+  background: var(--bg-bottom, #000000);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding-top: 0.2rem;
+}
+
+.projectImagesSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, var(--darken-opacity, 0.4));
+  opacity: var(--fade-active, 0);
+  transition: opacity var(--fade-duration, 1000ms) ease-in-out;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .projectDetailsSection {
@@ -39,26 +114,69 @@
   background-position: center;
   background-repeat: no-repeat;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding-top: 0.2rem;
+  padding-left: 0.2rem;
+}
+
+.projectDetailsSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, var(--darken-opacity, 0.4));
+  opacity: var(--fade-active, 0);
+  transition: opacity var(--fade-duration, 1000ms) ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Content layering - ensure content appears above background overlays */
+.leftColumn > *,
+.middleColumn > *,
+.rightColumn > *,
+.projectImagesSection > *,
+.projectDetailsSection > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* Dynamic Text Colors */
+.navigationText {
+  color: var(--color-navigation-text, #1a1a1a) !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.projectText {
+  color: var(--color-project-text, #2a2a2a) !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.projectLabels {
+  color: var(--color-project-labels, #555555) !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.projectImageTitles {
+  color: var(--color-project-image-titles, #2a2a2a) !important;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Legacy classes for backward compatibility */
 .primaryText {
-  color: var(--color-primary-text, #2a2a2a) !important;
+  color: var(--color-project-text, #2a2a2a) !important;
   transition: color 0.3s ease-in-out;
 }
 
 .secondaryText {
-  color: var(--color-secondary-text, #2a2a2a) !important;
+  color: var(--color-project-image-titles, #2a2a2a) !important;
   transition: color 0.3s ease-in-out;
 }
 
 .labelText {
-  color: var(--color-label-text, #555555) !important;
-  transition: color 0.3s ease-in-out;
-}
-
-.navigationText {
-  color: var(--color-navigation-text, #1a1a1a) !important;
+  color: var(--color-project-labels, #555555) !important;
   transition: color 0.3s ease-in-out;
 }
 

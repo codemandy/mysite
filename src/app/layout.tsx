@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import styles from "@/styles/backgrounds.module.css";
 
 export const metadata: Metadata = {
   title: "Mathias Tang",
@@ -14,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className={`antialiased ${styles.bottomBackground}`}>
         {children}
       </body>
     </html>

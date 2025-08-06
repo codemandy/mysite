@@ -25,7 +25,7 @@ export default function HomePage() {
     : projectThemes.default;
   
   // Apply theme using the custom hook
-  useTheme(currentTheme);
+  const { theme, backgroundsLoaded, fadeActive } = useTheme(currentTheme);
 
   // Load saved width from localStorage on mount
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen w-full" style={{ backgroundColor: '#f8f8f8' }}>
+    <div className="min-h-screen w-full">
       {/* Desktop Layout */}
       <div className="hidden lg:flex min-h-screen">
         {/* Left Sidebar - Project List */}
@@ -77,7 +77,7 @@ export default function HomePage() {
               {projects.length > 0 ? projects.map((project) => (
                 <div 
                   key={project.id}
-                  className={`tracking-wider cursor-pointer hover:opacity-70 transition-opacity ${styles.secondaryText}`}
+                  className={`tracking-wider cursor-pointer hover:opacity-70 transition-opacity ${styles.navigationText}`}
                   style={{ fontSize: '11px' }}
                   onClick={() => setSelectedProject(project)}
                 >
@@ -140,7 +140,7 @@ export default function HomePage() {
                     </div>
                     {selectedProject.imageTitles && selectedProject.imageTitles[0] && (
                       <div className="mt-2">
-                        <p className="text-xs" style={{ color: '#2a2a2a', fontSize: '11px' }}>
+                        <p className={`text-xs ${styles.projectImageTitles}`} style={{ fontSize: '11px' }}>
                           {selectedProject.imageTitles[0]}
                         </p>
                       </div>
@@ -162,7 +162,7 @@ export default function HomePage() {
                         </div>
                         {selectedProject.imageTitles && selectedProject.imageTitles[index + 1] && (
                           <div className="mt-2">
-                            <p className="text-xs" style={{ color: '#2a2a2a', fontSize: '11px' }}>
+                            <p className={`text-xs ${styles.projectImageTitles}`} style={{ fontSize: '11px' }}>
                               {selectedProject.imageTitles[index + 1]}
                             </p>
                           </div>
@@ -176,46 +176,46 @@ export default function HomePage() {
               {/* Right Column - Project Details (40%) */}
               <div className={`w-[40%] pt-8 pb-8 pl-4 pr-8 overflow-y-auto ${styles.projectDetailsSection}`}>
                 <div className="space-y-6">
-                  <h1 className={`text-lg font-medium tracking-wide uppercase ${styles.primaryText}`} style={{ fontSize: '11px' }}>
+                  <h1 className={`text-lg font-medium tracking-wide uppercase ${styles.projectText}`} style={{ fontSize: '11px' }}>
                     {selectedProject.name}
                   </h1>
                   
                   <div className="space-y-4">
                     {selectedProject.year && (
                       <div className="space-y-1">
-                        <h3 className={`text-xs font-medium tracking-wider ${styles.labelText}`} style={{ fontSize: '11px' }}>YEAR</h3>
-                        <p className={`text-xs ${styles.secondaryText}`} style={{ fontSize: '11px' }}>{selectedProject.year}</p>
+                        <h3 className={`text-xs font-medium tracking-wider ${styles.projectLabels}`} style={{ fontSize: '11px' }}>YEAR</h3>
+                        <p className={`text-xs ${styles.projectText}`} style={{ fontSize: '11px' }}>{selectedProject.year}</p>
                       </div>
                     )}
                     
                     {selectedProject.medium && (
                       <div className="space-y-1">
-                        <h3 className={`text-xs font-medium tracking-wider ${styles.labelText}`} style={{ fontSize: '11px' }}>MEDIUM</h3>
-                        <p className={`text-xs ${styles.secondaryText}`} style={{ fontSize: '11px' }}>{selectedProject.medium}</p>
+                        <h3 className={`text-xs font-medium tracking-wider ${styles.projectLabels}`} style={{ fontSize: '11px' }}>MEDIUM</h3>
+                        <p className={`text-xs ${styles.projectText}`} style={{ fontSize: '11px' }}>{selectedProject.medium}</p>
                       </div>
                     )}
                     
                     {selectedProject.dimensions && (
                       <div className="space-y-1">
-                        <h3 className={`text-xs font-medium tracking-wider ${styles.labelText}`} style={{ fontSize: '11px' }}>DIMENSIONS</h3>
-                        <p className={`text-xs ${styles.secondaryText}`} style={{ fontSize: '11px' }}>{selectedProject.dimensions}</p>
+                        <h3 className={`text-xs font-medium tracking-wider ${styles.projectLabels}`} style={{ fontSize: '11px' }}>DIMENSIONS</h3>
+                        <p className={`text-xs ${styles.projectText}`} style={{ fontSize: '11px' }}>{selectedProject.dimensions}</p>
                       </div>
                     )}
                   </div>
                   
                   {selectedProject.description && (
                     <div className="space-y-2">
-                      <h2 className={`text-sm font-medium tracking-wider ${styles.labelText}`} style={{ fontSize: '11px' }}>DESCRIPTION</h2>
-                      <p className={`text-xs leading-relaxed ${styles.primaryText}`} style={{ fontSize: '11px' }}>{selectedProject.description}</p>
+                      <h2 className={`text-sm font-medium tracking-wider ${styles.projectLabels}`} style={{ fontSize: '11px' }}>DESCRIPTION</h2>
+                      <p className={`text-xs leading-relaxed ${styles.projectText}`} style={{ fontSize: '11px' }}>{selectedProject.description}</p>
                     </div>
                   )}
                   
                   {selectedProject.details && selectedProject.details.length > 0 && (
                     <div className="space-y-2">
-                      <h2 className={`text-sm font-medium tracking-wider ${styles.labelText}`} style={{ fontSize: '11px' }}>DETAILS</h2>
+                      <h2 className={`text-sm font-medium tracking-wider ${styles.projectLabels}`} style={{ fontSize: '11px' }}>DETAILS</h2>
                       <ul className="space-y-1">
                         {selectedProject.details.map((detail, index) => (
-                          <li key={index} className={`text-xs ${styles.secondaryText}`} style={{ fontSize: '11px' }}>
+                          <li key={index} className={`text-xs ${styles.projectText}`} style={{ fontSize: '11px' }}>
                             {detail}
                           </li>
                         ))}
@@ -240,7 +240,7 @@ export default function HomePage() {
       )}
 
       {/* Mobile Layout */}
-      <div className="lg:hidden min-h-screen" style={{ backgroundColor: '#f8f8f8' }}>
+      <div className="lg:hidden min-h-screen">
         <Header />
         
         {/* Project List on Mobile */}
