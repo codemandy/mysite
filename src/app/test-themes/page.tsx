@@ -39,11 +39,11 @@ export default function TestThemesPage() {
         : `url('${currentTheme.backgrounds.projectDetailsSection}')`
     );
 
-    // Set text colors
-    root.style.setProperty('--color-primary-text', currentTheme.colors.primaryText);
-    root.style.setProperty('--color-secondary-text', currentTheme.colors.secondaryText);
-    root.style.setProperty('--color-label-text', currentTheme.colors.labelText);
+    // Set text colors (align with ProjectTheme.colors and CSS vars)
     root.style.setProperty('--color-navigation-text', currentTheme.colors.navigationText);
+    root.style.setProperty('--color-project-text', currentTheme.colors.projectText);
+    root.style.setProperty('--color-project-labels', currentTheme.colors.projectLabels);
+    root.style.setProperty('--color-project-image-titles', currentTheme.colors.projectImageTitles);
 
   }, [currentTheme]);
 
