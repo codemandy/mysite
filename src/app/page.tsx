@@ -24,8 +24,8 @@ export default function HomePage() {
     ? getThemeForProject(selectedProject.themeId || selectedProject.id)
     : projectThemes.default;
   
-  // Apply theme using the custom hook
-  const { theme, backgroundsLoaded, fadeActive } = useTheme(currentTheme);
+  // Apply theme using the custom hook (side effects only)
+  useTheme(currentTheme);
 
   // Load saved width from localStorage on mount
   useEffect(() => {

@@ -71,7 +71,7 @@ export default function TestThemesPage() {
     const totalCount = backgroundUrls.length;
 
     const preloadImage = (url: string) => {
-      return new Promise<void>((resolve, reject) => {
+      return new Promise<void>((resolve) => {
         const img = new Image();
         img.onload = () => {
           loadedCount++;
