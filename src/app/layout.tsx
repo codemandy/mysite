@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import styles from "@/styles/backgrounds.module.css";
+import VersionSwitch from "@/components/VersionSwitch";
 
 export const metadata: Metadata = {
   title: "Mathias Tang",
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased ${styles.bottomBackground}`}>
+        <VersionSwitch />
         {children}
       </body>
     </html>
